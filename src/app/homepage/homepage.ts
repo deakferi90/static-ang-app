@@ -12,7 +12,7 @@ export class Homepage implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get('data.json').subscribe((data) => {
+    this.http.get('http://localhost:3000/jobs').subscribe((data) => {
       this.props = data;
       console.log(this.props);
     });
